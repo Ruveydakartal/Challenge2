@@ -8,10 +8,8 @@ shelly_port = 80
 shelly_url = f"http://{shelly_ip}:{shelly_port}"
 
 # Send an HTTP GET request to turn the plug on
-response = requests.get(f"{shelly_url}/relay/on")
-
-# Send an HTTP GET request to turn the plug off
-response = requests.get(f"{shelly_url}/relay/off")
+response = requests.get(
+"http://172.20.10.2/relay/0?turn=on")
 
 # You can also query the status of the plug
 status_response = requests.get(f"{shelly_url}/relay")

@@ -1,8 +1,16 @@
-const socket = new WebSocket("ws://your.websocket.server.address");
 
 function sendPassword() {
-    const password = document.getElementById("password").value;
-    socket.send(password);
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "http://172.20.10.2/relay/0?turn=on", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify({ password: currentPassword }));
+}
+
+function turnOff() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "http://172.20.10.2/relay/0?turn=off", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify({ password: currentPassword }));
 }
 
 const passwordInput = document.getElementById('password');
