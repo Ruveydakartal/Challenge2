@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Escape Room Password</title>
+</head>
+<body>
+    <input type="text" id="password" placeholder="Enter the password">
+    <button onclick="sendPassword()">Submit</button>
+    <script>
+        const socket = new WebSocket("ws://your.websocket.server.address");
+
+        function sendPassword() {
+            const password = document.getElementById("password").value;
+            socket.send(password);
+        }
+    </script>
+</body>
+</html>
