@@ -16,8 +16,9 @@ function appendDigit(digit) {
 function submitPassword() {
     // Replace this with your password validation logic
     if (currentPassword === '1234') {
-        alert('Password is correct. Light is turning on.');
+        window.location.href = 'correct.html';
         sendPassword();
+
     } else {
         alert('Incorrect password. Try again.');
     }
