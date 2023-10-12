@@ -1,17 +1,30 @@
 <html>
 <head>
-    <title>Escape Room Password</title>
+    <title>Blacklight Password</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <input type="text" id="password" placeholder="Enter the password">
-    <button onclick="sendPassword()">Submit</button>
-    <script>
-        const socket = new WebSocket("ws://your.websocket.server.address");
 
-        function sendPassword() {
-            const password = document.getElementById("password").value;
-            socket.send(password);
-        }
-    </script>
+    <h1>Blacklight Password</h1>
+    <div class="password-entry">
+        <input type="text" id="password" readonly>
+        <div class="button-row">
+            <button class="number-button" onclick="appendDigit(1)">1</button>
+            <button class="number-button" onclick="appendDigit(2)">2</button>
+            <button class="number-button" onclick="appendDigit(3)">3</button>
+        </div>
+        <div class="button-row">
+            <button class="number-button" onclick="appendDigit(4)">4</button>
+            <button class="number-button" onclick="appendDigit(5)">5</button>
+            <button class="number-button" onclick="appendDigit(6)">6</button>
+        </div>
+        <div class="button-row">
+            <button class="number-button" onclick="appendDigit(7)">7</button>
+            <button class="number-button" onclick="appendDigit(8)">8</button>
+            <button class="number-button" onclick="appendDigit(9)">9</button>
+        </div>
+        <button class="submit-button" onclick="submitPassword()">Submit</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
