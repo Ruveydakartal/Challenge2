@@ -8,6 +8,7 @@ body {
     background-color: #1a1a1a;
     font-family: Arial, sans-serif;
     color: #fff;
+
 }
 
 h1{
@@ -68,4 +69,23 @@ h1{
 
 .submit-button:hover {
     background-color: #00a;
+}
+
+
+.schakelaars{
+    display: flex;
+
+}
+
+.schakelaar {
+    margin: 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.state{
+    font-weight: 900;
 }
